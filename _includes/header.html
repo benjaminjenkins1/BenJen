@@ -1,10 +1,11 @@
 <!DOCTYPE hmtl>
 <head>
 
-<meta charset"utf-8>
+<meta charset"utf-8">
 <title>{% if page.title %}{{page.title}} - {{site.data.gloal.title}}{%elsif post.title%}{{post.title}} - {{site.data.global.title}} {%else%}{{site.data.global.title}}{%endif%}</title>
 
-<link rel="stylesheet" href="{{site.data.global.url}}css/style.css" type="text/css">
+<link rel="stylesheet" href="{{site.data.global.url}}/css/style.css" type="text/css">
+<script src="{{site.data.global.url}}/js/jquery-3.1.1.min.js"></script>
 
 </head>
 
@@ -14,7 +15,9 @@
   <div class="header">
     <a href="{{site.data.global.url}}"><span id="B" class="sitename">B</span></a>
       <div class="navlinks">
-       <a href="#">link1</a><a href="#">link2</a> <a href="#">link3</a>     
+       <a href="{{site.data.global.url}}/_pages/about">About</a>
+       <a href="{{site.data.global.url}}/_pages/blog">Blog</a>
+       <a href="{{site.data.global.url}}/_pages/portfolio">Portfolio</a>
       </div>
   </div>
 </div>

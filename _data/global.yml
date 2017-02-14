@@ -1,7 +1,7 @@
 # Site Settings
 title: 'BenJen'
 description: "The blog of Benjamin Jenkins. Theres some neat stuff here, or at least I think so."
-url: 'http://127.0.0.1:4000/' # the base hostname & protocol for your site
+url: 'http://127.0.0.1:4000' # the base hostname & protocol for your site
 
 # Admin Settings
 admin_name: 'Benjamin Jenkins'

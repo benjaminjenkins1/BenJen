@@ -1,26 +1,5 @@
-document.getElementById("B").addEventListener("mouseover", function(){
-	var elem = document.getElementById("B");
-	var pos = 6;
-	var id = setInterval(frame, 10);
-	function frame(){
-		if(pos == 10){clearInterval(id);}
-		else{
-			pos++;
-			elem.style.top = pos + "px";
-		}
-	}
+$("#B").hover(function(){
+    $(this).stop(true, false).animate({ top: "10px" }, 200);
+}, function() {
+    $(this).stop(true, false).animate({ top: "6px" }, 200);
 });
-
-document.getElementById("B").addEventListener("mouseout", function(){
-	var elem = document.getElementById("B");
-	var pos = 10;
-	var id2 = setInterval(frame, 10);
-	function frame(){
-		if(pos == 6){clearInterval(id2);}
-		else{
-			pos--;
-			elem.style.top = pos + "px";
-		}
-	}
-});
-
