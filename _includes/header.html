@@ -2,7 +2,7 @@
 <head>
 
 <meta charset"utf-8">
-<title>{% if page.title %}{{page.title}} - {{site.data.gloal.title}}{%elsif post.title%}{{post.title}} - {{site.data.global.title}} {%else%}{{site.data.global.title}}{%endif%}</title>
+<title>{% if page.title %}{{page.title}} - {{site.data.global.title}}{%elsif post.title%}{{post.title}} - {{site.data.global.title}} {%else%}{{site.data.global.title}}{%endif%}</title>
 
 <link rel="stylesheet" href="{{site.data.global.url}}/css/style.css" type="text/css">
 <script src="{{site.data.global.url}}/js/jquery-3.1.1.min.js"></script>
@@ -15,9 +15,9 @@
   <div class="header">
     <a href="{{site.data.global.url}}"><span id="B" class="sitename">B</span></a>
       <div class="navlinks">
-       <a href="{{site.data.global.url}}/_pages/about">About</a>
        <a href="{{site.data.global.url}}/_pages/blog">Blog</a>
        <a href="{{site.data.global.url}}/_pages/portfolio">Portfolio</a>
+       <a href="{{site.data.global.url}}/_pages/about">About</a>
       </div>
   </div>
 </div>
