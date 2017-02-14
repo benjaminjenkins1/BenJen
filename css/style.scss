@@ -11,6 +11,7 @@ body{
 }
 .header{
   max-width:750px;
+  height: 40px;
   position:relative;
   min-width:400px;
   padding:10px;
@@ -21,9 +22,14 @@ body{
   margin-right:auto;
   border-bottom: 3px solid black;
 }
+a{
+  color:black;
+}
 .sitename{
   font-size:35px;
   font-weight: 700;
+  position:absolute;
+  top:6px;
 }
 .navlinks{
   display:inline-block;

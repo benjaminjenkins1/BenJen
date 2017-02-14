@@ -4,7 +4,7 @@
 <meta charset"utf-8>
 <title>{% if page.title %}{{page.title}} - {{site.data.gloal.title}}{%elsif post.title%}{{post.title}} - {{site.data.global.title}} {%else%}{{site.data.global.title}}{%endif%}</title>
 
-<link rel="stylesheet" href="{{site.data.global.url}}/css/style.css" type="text/css">
+<link rel="stylesheet" href="{{site.data.global.url}}css/style.css" type="text/css">
 
 </head>
 
@@ -12,7 +12,7 @@
 
 <div class="headerbar">
   <div class="header">
-    <span class="sitename">B</span>
+    <a href="{{site.data.global.url}}"><span id="B" class="sitename">B</span></a>
       <div class="navlinks">
        <a href="#">link1</a><a href="#">link2</a> <a href="#">link3</a>     
       </div>
