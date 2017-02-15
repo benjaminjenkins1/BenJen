@@ -1,8 +1,8 @@
 {%include header.html%}
-<div class="content">
+<div id="content">
   {{content}}
   {%for post in site.posts%}
-    <a href="{{post.url}}">
+    <a href="{{post.url}}" style="text-decoration: none !important;">
       <div class="blogitem">
       <p class="post-title">{{post.title}}</p>
       <p>{{post.lead}}</p>
@@ -10,5 +10,6 @@
       </div>
     </a>
   {%endfor%}
+<br><br><br>
 </div>
 {%include footer.html%}
