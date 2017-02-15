@@ -8,7 +8,9 @@ $font-content: "Source Code Pro Light";
   src: url("{{site.data.global.url}}/fonts/SourceCodePro-Light.ttf")
 }
 body{
+  line-height:24px;
   font-family: $font-content;
+  font-size:11pt;
   background-color:white;
   text-align:left;
 }
@@ -52,8 +54,8 @@ a{
   a{
     color:black;
     padding:3px;
-    padding-left:20px;
-    padding-right:20px;
+    padding-left:15px;
+    padding-right:15px;
     margin-left:15px;
     text-decoration:none;
   }
@@ -69,11 +71,19 @@ a{
   margin-right: auto;
 }
 .blogitem{
+
+  p{
+    margin-top:10px;
+  }
   .post-title{
+    margin:0;
     font-size:16pt;
     padding-left:0px;
     padding-right:0px;
     display: inline-block;
+  }
+  .blog-post-date{
+    color:lightgray;
   }
 }
 .blogitem:hover{
@@ -81,16 +91,17 @@ a{
     color:white;
     background-color: black;
   }
+  .blog-post-date{
+    color:black;
+  }
 }
-.footerbar{
-  height:30px;
+footer{
   position:fixed;
-  bottom:30px;
-  width:100%;
-}
-.footer{
+  bottom:0;
+  left:0;
+  right:0;
   background-color:white;
-  padding:0;
+  height:40px;
   padding-top:10px;
   margin-bottom:20px;
   border-top: 2px solid black;
@@ -102,10 +113,15 @@ a{
     width:80px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0;
     img{
       width:20px;
       height:20px;
     }
   }
-
+  p{
+    margin-top: 5px;;
+    font-size: 12px;
+    text-align: center;
+  }
 }
