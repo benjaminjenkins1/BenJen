@@ -220,6 +220,7 @@ var Board = function (_React$Component) {
 			width = 70;
 			height = 30;
 			board = 'board27';
+      size = 'lg';
 		} else if (size == 'lg') {
 			width = 18;
 			height = 9;
