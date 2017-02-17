@@ -27,9 +27,26 @@ Add this to your _config.yml:
 
 Now go add some stuff the index.html file in your site's root directory so that something shows up once we build the site.
 
-Build the side by running `jekyll b` at your site's root. It will make a folder called "_site". This contains the ready-to-serve files. You can start a super-useful dev-server that rebuilds the page whenever you make changes by running `jekyll s`.
+Build the side by running `jekyll b` at your site's root. It will make a folder called _site . This contains the ready-to-serve files. You can start a super-useful dev-server that rebuilds the page whenever you make changes by running `jekyll s`.
 
-if you navigate to the address of the Jekyll dev-server, you'll see the contents of your index.html file. It's probably a lbit boring right now, unless you went crazy on the "add some stuff" step. To start turning this into a functional blog, we'll have to add a few more folders to its root directory. Make folders called "_pages" and "_includes." "_pages" will hold the non-post pages I mentioned earlier, and "includes" will hold stuff like headers, footers, and any other elements you'll want to reuse several times on your site. 
+if you navigate to the address of the Jekyll dev-server, you'll see the contents of your index.html file. It's probably a lbit boring right now, unless you went crazy on the "add some stuff" step. To start turning this into a functional blog, we'll have to add a few more folders to its root directory. Make folders called _pages and _includes. _pages will hold the non-post pages I mentioned earlier, and "includes" will hold stuff like headers, footers, and any other elements you'll want to reuse several times on your site. It's also a good idea to make a folder called "_data" and indide it make a file called global.yml. This file holds sitewide data like the site's URL, title, and author information, for use in your pages. It should look something like this:
+```
+# Site Settings
+title: 'BenJen'
+description: "The blog of Benjamin Jenkins. Theres some neat stuff here, or at least I think so."
+url: 'http://benjen.me' # the base hostname & protocol for your site
+
+# Admin Settings
+admin_name: 'Benjamin Jenkins'
+admin_email: 'ben@benjen.me'
+```
+
+## The Fun(ner) Stuff
+
+Now it's time to start making the site look like a site. Make a new file in the _layouts folder called header.html, and another called footer.html . Thhe contents of these files will show up wherever you use the relevant {% include somefile.html %} tag, likely in your layouts, which we'll get to next.
+
+Take a look at this [Liquid Syntax information](http://shopify.github.io/liquid/basics/introduction/) to learn more about the Liquid templating language Jekyll uses.
+
 
 
 
