@@ -1,0 +1,170 @@
+var width = 18;
+var height = 9;
+var board = 'board9';
+var size = 'sm';
+var interval = 200;
+var newState = [];
+var intervalID;
+buildState();
+
+function Square(props){
+	return <button className={props.className} onClick={()=>props.onClick()}>&nbsp;</button>;
+}
+function StepButton(props){
+	return <button className='start btn btn-primary' onClick={()=>props.onClick()}>Step</button>;
+}
+function StartButton(props){
+	return <button className='start btn btn-primary' onClick={()=>props.onClick()}>Start</button>;
+}
+function ResizeButton(props){
+	return <button className='resize btn btn-primary' onClick={()=>props.onClick()}>Resize</button>;
+}
+function SpeedButton(props){
+	return <button className='resize btn btn-primary' onClick={()=>props.onClick()}>Change Speed</button>;
+}
+function StopButton(props){
+	return <button className='resize btn btn-primary' onClick={()=>props.onClick()}>Stop</button>;
+}
+
+class Board extends React.Component{
+	constructor(props){
+		super(props);
+		this.state = {
+			board: newState,
+			timer: null,
+		}
+	}
+	renderSquare(val,num){
+		return <Square className={val} value={num} onClick={()=>this.handleClick(num)}/>
+	}
+	renderStepButton(){
+		return <StepButton onClick={()=>this.handleStep()}/>
+	}
+	renderStartButton(){
+		return <StartButton onClick={()=>this.handleStart()}/>
+	}
+	renderResizeButton(){
+		return <ResizeButton onClick={()=>this.resizeBoard()}/>
+	}
+	renderSpeedButton(){
+		return <SpeedButton onClick={()=>this.changeSpeed()}/>
+	}
+	renderStopButton(){
+		return <StopButton onClick={()=>this.stop()}/>
+	}
+	handleClick(num){
+		if(newState[num] == 'empty'){newState[num] = 'new';}
+		else if(newState[num] == 'new'){newState[num] = 'old'}
+		else{newState[num] = 'empty';}
+		this.updateState();
+	}
+	updateState(){
+		this.setState(prevState => {return {board: newState}});
+	}
+	handleStep(){
+		this.tick();
+	}
+	handleStart(){
+		this.tick();
+		intervalID = setInterval(this.tick.bind(this), interval);
+	}
+	changeSpeed(){
+		switch(interval){
+			case 200:
+				interval = 100;
+				intervalID = setInterval(this.tick.bind(this), interval);
+				break;
+			case 100:
+				interval = 50;
+				intervalID = setInterval(this.tick.bind(this), interval);
+				break;
+			case 50:
+				interval = 200;
+				intervalID = setInterval(this.tick.bind(this), interval);
+				break;
+		}
+	}
+	stop(){
+		clearInterval(intervalID);
+	}
+	tick(){
+		var neighbors = 0;
+		var newNewState = newState.slice();
+		for(var i=0; i<newState.length; i++){
+			neighbors = countNeighbors(i);
+			if(newState[i] =='new'){newNewState[i] = 'old';}
+			if(newState[i] == 'new' || newState[i] == 'old'){
+				if(neighbors < 2){newNewState[i] = 'empty'}
+				if(neighbors == 2 || neighbors == 3){newNewState[i] = 'old'}
+				if(neighbors > 3){newNewState[i] = 'empty'}
+			}
+			if(newState[i] == 'empty' && neighbors == 3){newNewState[i] = 'new'}
+		}
+		newState = newNewState.slice();
+		this.updateState();
+	}
+	resizeBoard(){
+		if(size == 'sm'){
+			width = 36;
+			height = 18;
+			board = 'board18';
+			size = 'med';
+		}
+		else if(size == 'med'){
+			width = 70;
+			height = 30;
+			board = 'board27'
+		}
+		else if(size == 'lg'){
+			width = 18;
+			height = 9;
+			board = 'board9';
+			size = 'sm';
+		}
+		buildState();
+		this.updateState();
+	}
+	render(){
+		var toRender = this.state.board.map((val,num)=>{
+			return this.renderSquare(val,num);
+		});
+		return(
+			<div>
+				<div className={board}>
+				{toRender}
+				</div>
+				{this.renderStartButton()}
+				{this.renderSpeedButton()}
+				{this.renderStepButton()}
+				{this.renderStopButton()}
+				{this.renderResizeButton()}
+			</div>
+		);
+	}
+}
+function countNeighbors(i){
+	var num = 0;
+	//left and right
+	if((newState[i+1] == 'new' || newState[i+1] == 'old') && (i+1) % width !== 0){num++;}
+	if((newState[i-1] == 'new' || newState[i-1] == 'old') && i % width !== 0){num++;}
+	//above & below
+	if(newState[i+width] == 'new' || newState[i+width] == 'old'){num++;}
+	if(newState[i-width] == 'new' || newState[i-width] == 'old'){num++;}
+	//top-right
+	if((newState[i-width+1] == 'new' || newState[i-width+1] == 'old') && (i+1) % width !== 0){num++;}
+	//top-left
+	if((newState[i-width-1] == 'new' || newState[i-width-1] == 'old') && i % width !== 0){num++;}
+	//botom-right
+	if((newState[i+width+1] == 'new' || newState[i+width+1] == 'old') && (i+1) % width !== 0){num++;}
+	//bottom-left
+	if((newState[i+width-1] == 'new' || newState[i+width-1] == 'old') && i % width !== 0){num++;}
+	return num;
+}
+function buildState(){
+	newState = [];
+	for(var i=0; i<width*height; i++){
+		newState.push('empty');
+	}
+}
+
+ReactDOM.render(<Board/>,document.getElementById('game-container'));
