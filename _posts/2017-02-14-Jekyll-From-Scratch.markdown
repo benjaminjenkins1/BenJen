@@ -27,4 +27,13 @@ Add this to your _config.yml:
 
 Now go add some stuff the index.html file in your site's root directory so that something shows up once we build the site.
 
-Build the side by running `jekyll b` at your site's root. It will make a folder called _site. This contains the ready-to-serve files.
+Build the side by running `jekyll b` at your site's root. It will make a folder called "_site". This contains the ready-to-serve files. You can start a super-useful dev-server that rebuilds the page whenever you make changes by running `jekyll s`.
+
+if you navigate to the address of the Jekyll dev-server, you'll see the contents of your index.html file. It's probably a lbit boring right now, unless you went crazy on the "add some stuff" step. To start turning this into a functional blog, we'll have to add a few more folders to its root directory. Make folders called _pages and _includes.
+
+
+
+
+
+
+
