@@ -33,7 +33,8 @@ if you navigate to the address of the Jekyll dev-server, you'll see the contents
 ```
 # Site Settings
 title: 'BenJen'
-description: "The blog of Benjamin Jenkins. Theres some neat stuff here, or at least I think so."
+description: "The blog of Benjamin Jenkins. Theres some neat stuff here, 
+or at least I think so."
 url: 'http://benjen.me' # the base hostname & protocol for your site
 
 # Admin Settings
