@@ -5,7 +5,7 @@ lead: If youre like me and would rather not represent yourself with someone else
 
 ## Getting Started
 
-First, you obviously need to get everything installed. Rather than type out a lengthy instalation guide here, I'll point you to [Scotch.io's excellent installation guide](https://scotch.io/tutorials/getting-started-with-jekyll-plus-a-free-bootstrap-3-starter-theme). Stop when you get to the "Getting Started" section, because `jekyll new my-blog` will add the default theme to you site, and that's not what we want.
+First, you obviously need to get everything installed. Rather than type out a lengthy instalation guide here, I'll point you to [Scotch.io's excellent installation guide](https://scotch.io/tutorials/getting-started-with-jekyll-plus-a-free-bootstrap-3-starter-theme). Stop when you get to the "Getting Started" section, because `jekyll new my-blog` will add the default theme to your site, and that's not what we want.
 
 Instead, to set up a blank slate site, type `jekyll new your-blog-name --blank`. This will create a new folder in the current directory with the most barebones site possible. It's so barebones it doesn't even have a config file, so that's what we'll do first.
 
@@ -43,7 +43,7 @@ admin_email: 'ben@benjen.me'
 
 ## The Fun(ner) Stuff
 
-Now it's time to start making the site look like a site. Make a new file in the _layouts folder called header.html, and another called footer.html . Thhe contents of these files will show up wherever you use the relevant {% include somefile.html %} tag, likely in your layouts, which we'll get to next.
+Now it's time to start making the site look like a site. Make a new file in the _layouts folder called header.html, and another called footer.html . Thhe contents of these files will show up wherever you use the relevant {% raw %} {% include somefile.html %} {% endraw %} tag, likely in your layouts, which we'll get to next.
 
 Take a look at this [Liquid Syntax information](http://shopify.github.io/liquid/basics/introduction/) to learn more about the Liquid templating language Jekyll uses.
 
