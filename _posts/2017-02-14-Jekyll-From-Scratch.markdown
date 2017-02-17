@@ -14,12 +14,12 @@ Note: Now would also be a good time to set this directory up as a git repository
 Make a new file in the root directory of your new site called `_config.yml`. Windows: `tpye nul > _config.yml` Bash: `touch _config.yml`. Right now we'll just add a few basic necesseties, like where Jekyll should look for layouts, and pages other than your blog posts, like "about me" or "portfolio' pages. 
 
 Add this to your _config.yml:
-`# Where things are
-source:      .
-destination: ./_site
-plugins_dir: ./_plugins
-layouts_dir: ./_layouts
-data_dir:    ./_data
+  # Where things are
+  source:      .
+  destination: ./_site
+  plugins_dir: ./_plugins
+  layouts_dir: ./_layouts
+  data_dir:    ./_data
 
 include ['_pages']`
 
