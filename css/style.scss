@@ -18,6 +18,10 @@ body{
 h1, h2, h3{
   font-family: $font-header;
 }
+#container{
+ position: relative;
+ min-height: 100%;
+}
 .header{
   background-color:white;
   width:750px;
