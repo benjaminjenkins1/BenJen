@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "Source Code Pro Light";
+  src: url("https://benjen.me/fonts/SourceCodePro-Light.ttf"); }
+html {
+  overflow-y: scroll; }
+
+body {
+  line-height: 24px;
+  font-family: "Century Gothic", Futura, sans-serif;
+  font-size: 11pt;
+  background-color: white;
+  text-align: left;
+  padding: 0; }
+
+h1, h2, h3 {
+  font-family: "Century Gothic", Futura, sans-serif; }
+
+#container {
+  position: relative;
+  min-height: 100%;
+  max-width: 100%; }
+
+.header {
+  background-color: white;
+  max-width: 750px;
+  height: 40px;
+  position: fixed;
+  top: 0;
+  padding: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0; }
+
+.header-content {
+  margin: 0 8px 0 8px;
+  border-bottom: 2px solid black;
+  height: 48px; }
+
+a {
+  color: black;
+  text-decoration: none; }
+
+.sitename {
+  font-size: 35px;
+  font-weight: 700;
+  position: absolute;
+  top: 25px;
+  font-family: "Century Gothic", Futura, sans-serif; }
+
+.navlinks {
+  float: right;
+  position: absolute;
+  max-width: 80%;
+  bottom: 5px;
+  right: 0; }
+  .navlinks a {
+    color: black;
+    padding: 3px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: 15px;
+    text-decoration: none;
+    white-space: nowrap; }
+  .navlinks a:hover {
+    background-color: black;
+    color: white; }
+
+#content {
+  max-width: 650px;
+  padding-bottom: 5rem;
+  margin-left: auto;
+  margin-right: auto; }
+  #content a {
+    text-decoration: underline; }
+
+.post-date {
+  color: lightgray; }
+
+.post-date:hover {
+  color: black; }
+
+.blogitem p {
+  margin-top: 10px; }
+.blogitem .post-title {
+  margin: 0;
+  font-size: 16pt;
+  padding-left: 0px;
+  padding-right: 0px;
+  display: inline-block; }
+.blogitem .blog-post-date {
+  color: lightgray; }
+
+.blogitem:hover .post-title {
+  color: white;
+  background-color: black; }
+.blogitem:hover .blog-post-date {
+  color: black; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  height: 50px;
+  padding-top: 8px;
+  margin-bottom: 0;
+  border-top: 2px solid black;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto; }
+  footer .imgs {
+    width: 80px;
+    margin-left: auto;
+    margin-right: auto; }
+    footer .imgs img {
+      width: 20px;
+      height: 20px; }
+  footer p {
+    margin-top: 0px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    line-height: 15px;
+    font-size: 12px;
+    text-align: center; }
+
+code, pre {
+  background-color: #E8E8E8; }
+
+.text-center {
+  text-align: center; }
+
+#contact-form {
+  margin-top: 2rem;
+  display: inline-block;
+  text-align: left; }
+
+#contact-form div {
+  margin-bottom: 1rem; }
+
+#contact-form label {
+  display: inline-block;
+  width: 6rem; }
+
+#contact-form label:last-of-type {
+  vertical-align: top; }
+
+#contact-form input, #contact-form textarea {
+  width: 18rem;
+  border: 1px solid black; }
+
+#contact-form button {
+  display: block;
+  margin: 1rem auto 0 auto; }
+
+.mt-3 {
+  margin-top: 3rem; }
+
+.mt-4 {
+  margin-top: 4rem; }
+
+.home-links {
+  text-align: center;
+  padding-top: 3rem; }
+
+.home-link {
+  display: inline-block;
+  background-color: black;
+  border: 1px solid black;
+  color: white;
+  text-decoration: none !important;
+  padding: 0.5rem;
+  font-size: 1.1em;
+  width: 7rem;
+  margin-top: 1rem; }
+
+.home-link:hover {
+  display: inline-block;
+  background-color: white;
+  color: black; }
+
+#applause-button {
+  margin: 1rem auto 1rem auto; }

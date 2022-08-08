@@ -1,0 +1,67 @@
+<!DOCTYPE hmtl>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BenJen</title>
+
+  <link rel="stylesheet" href="https://benjen.me/css/style.css" type="text/css">
+  <script src="https://benjen.me/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140688845-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-140688845-1');
+  </script>
+
+
+</head>
+
+<body>
+<div id="container">
+<div class="header">
+  <div class="header-content">
+    <a href="https://benjen.me"><span id="B" class="sitename">B</span></a>
+      <div class="navlinks">
+        <a href="https://benjen.me">Home</a>
+        <a href="https://benjen.me/_pages/portfolio.html">Portfolio</a>
+        <a href="https://benjen.me/_pages/about.html">About Me</a>
+        <a href="https://benjen.me/_pages/contact.html">Contact</a>
+      </div>
+  </div>
+</div>
+
+<br><br><br>
+<div id="content" class="text-center">
+<p>Send me something!</p>
+
+<form id="contact-form" action="https://sendmail.benjen.me" method="POST" enctype="application/x-www-form-urlencoded">
+<div><label>Your name</label><input name="name" type="text"></div>
+<div><label>Your email</label><input name="email" type="text"></div>
+<div><label>Subject</label><input name="subject" type="text"></div>
+<div><label>Message</label><textarea name="text" rows="20"></textarea></div>
+<input name="success_redirect" value="https://benjen.me/_pages/thankyou.html" hidden>
+<input name="failure_redirect" value="https://benjen.me/_pages/contact.html" hidden>
+<button type="submit">Send</button>
+</form>
+<br><br><br>
+</div>
+<footer>
+    <div class="imgs">
+      <a href="https://www.facebook.com/bbenkins"><img src="https://benjen.me/img/facebook.png"></a>
+      <a href="https://github.com/benjaminjenkins1"><img src="https://benjen.me/img/github.png"></a>
+      <a href="https://www.linkedin.com/in/benjamin-jenkins-44086bb7/"><img src="https://benjen.me/img/linkedin.png"></a>
+    </div>
+    <a href="https://benjen.me/_pages/about.html"><p>© <span id="this-year">2019</span> - Benjamin Jenkins</p></a>
+</footer>
+</div>
+<script src="https://benjen.me/js/power.js" type="text/javascript"></script>
+
+</body>
+</html>
+

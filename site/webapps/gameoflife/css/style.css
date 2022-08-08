@@ -1,0 +1,72 @@
+body {
+	text-align: center;
+	font-family: "Century Gothic", Futura, sans-serif;
+	background-color: lightgray;
+}
+#game-container {
+	margin-top: 20px;
+}
+.empty, .new, .old {
+	width: 25px;
+	height: 25px;
+	border: 1px solid darkslategray;
+	display: inline;
+	margin: 0;
+}
+.empty {
+	display: inline;
+	background-color: lightgray;
+	margin: 0;
+}
+.new {
+	background-color: darkslategray;
+}
+.old {
+	background-color: gray;
+}
+.empty:focus {
+	outline: 0;
+}
+.new:focus {
+	outline: 0;
+}
+.old:focus {
+	outline: 0;
+}
+.start {
+	
+}
+.board9 {
+	width: 450px;
+	height: 225px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.board18{
+	width: 900px;
+	height: 450px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.board27{
+	width: 1750px;
+	height: 750px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.start {
+	margin: 5px;
+	background-color: darkslategray;
+	color: lightgray;
+}
+.resize {
+	margin: 5px;
+	background-color: darkslategray;
+	color: lightgray;
+}
+.start:hover {
+	background-color: gray;
+}
+.resize:hover {
+	background-color: gray;
+}
