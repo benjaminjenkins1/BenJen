@@ -1,0 +1,160 @@
+/* TSOS.css */
+
+body {
+  font-family: Helvetica, Verdana, Arial, sans-serif;
+  font-size: 0.8rem !important;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0;
+}
+
+h1 {
+  color: black;
+  font-size: 24pt;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h2 {
+  color: black;
+  font-size: 20pt;
+  font-weight: normal;
+  font-style: normal;
+}
+
+h3 {
+  font-family: Helvetica, Verdana, Arial, sans-serif;
+  font-size: 16pt;
+  font-weight: normal;
+  font-style: normal;
+}
+
+#display {
+  cursor: default;
+}
+#display:focus {
+  outline: none;
+}
+
+.normal_button {
+  min-width: 100px;
+}
+
+.footerText {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 8pt;
+  text-align: center;
+}
+
+#divMain {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+#divHeader { 
+  width: 100%;
+  text-align: center;
+}
+
+#divConsole {
+  
+  margin: 20px 20px 0 20px;
+}
+
+#divUserProgramInput {
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+#schedulingAlgorithm {
+  float: right;
+  margin-bottom: 10px;
+}
+
+#divConsole div {
+  margin-bottom: 20px;
+}
+
+#divPcbDisplay {
+  width: 400px;
+}
+
+#hostInfo {
+  margin: 20px 20px 0 20px;
+}
+
+#memoryDisplay {
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+
+#memoryContents {
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+#cpuTable {
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+#pcbTable {
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+.HDDContainer {
+  width: 400px;
+  max-height: 400px;
+  overflow: scroll;
+  margin-bottom: 20px;
+}
+
+#taHostLog {
+  height: 250px;
+  width: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+
+#canvasContainer {
+  width: 520px;
+  height: 510px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border: 1px solid black;
+}
+
+#btnStep {
+  display: none;
+}
+
+.memCurrentInstruction {
+  font-weight: bold;
+  color: blue;
+}
+
+.memCurrentOperand {
+  font-weight: bold;
+  color: green;
+}
+
+.hostlog-clock {
+  float: right;
+  margin-right: 15px;
+}
+
+.hostlog-item {
+  width: 100%;
+  border-top: 1px solid #ececec;
+}
+
+.hostlog-time {
+  color: grey;
+  font-size: 0.7rem;
+}
